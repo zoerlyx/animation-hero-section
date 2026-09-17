@@ -1,8 +1,8 @@
 @import "tailwindcss";
-@source "../components";
-@source "../app";
 
-/* Import langsung CSS hero di sini */
-@import "../components/originkit/hero-11.css";
+@source "./components";
+@source "./app";
+
+
 @import "../app/originkit-section-theme.css";
 @import "../app/originkit-section-themes.css";
