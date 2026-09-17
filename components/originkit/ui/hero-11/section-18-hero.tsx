@@ -11,8 +11,8 @@ import {
   GlowBackground,
   GradientOverlay,
 } from "./glow-background";
-import { HeroContent } from "@/components/originkit/ui/hero-11/hero-content";
-import { Navbar } from "@/components/originkit/ui/hero-11/navbar";
+import { HeroContent } from "./hero-content";
+import { Navbar } from "./navbar";
 import { PortraitStage } from "@/components/originkit/ui/hero-11/portrait-stage";
 
 export const Section18Hero = () => {
