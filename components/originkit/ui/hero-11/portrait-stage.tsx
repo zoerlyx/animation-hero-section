@@ -8,7 +8,7 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import type { CSSProperties } from "react";
-import LiquidHover from "@/components/originkit/ui/hero-11/liquid-distortion";
+import LiquidHover from "./liquid-distortion";
 
 /** Asset root — flat files in package assets/. */
 const A = "/originkit/hero-11";
