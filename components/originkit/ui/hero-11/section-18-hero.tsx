@@ -13,7 +13,7 @@ import {
 } from "./glow-background";
 import { HeroContent } from "./hero-content";
 import { Navbar } from "./navbar";
-import { PortraitStage } from "@/components/originkit/ui/hero-11/portrait-stage";
+import { PortraitStage } from "./portrait-stage";
 
 export const Section18Hero = () => {
   const handleGetStarted = () => {
