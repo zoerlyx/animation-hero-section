@@ -7,7 +7,7 @@
 "use client";
 
 import type { KeyboardEvent } from "react";
-import { Button } from "@/components/originkit/ui/hero-11/button";
+import { Button } from "./button";
 
 /** Asset root — flat files in package assets/. */
 const A = "/originkit/hero-11";
