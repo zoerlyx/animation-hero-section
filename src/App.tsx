@@ -1,5 +1,5 @@
-import Hero11 from '@/components/originkit/hero-11'
-import '@/components/originkit/hero-11.css'
+import Hero11 from '../components/originkit/hero-11'
+import '../components/originkit/hero-11.css'
 
 export default function App() {
   return (
