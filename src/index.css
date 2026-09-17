@@ -1,3 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Import theme bawaan Originkit yang ada di folder app/ */
+@import "../app/originkit-section-theme.css";
+@import "../app/originkit-section-themes.css";
