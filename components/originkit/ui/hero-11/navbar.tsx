@@ -76,18 +76,24 @@ export const Navbar = ({ onBookNow }: NavbarProps) => {
       {/* Desktop — Figma: left 100 / top 36 / width 1231 within 1440 */}
       <div className="mx-auto hidden w-full max-w-[1440px] items-center justify-between px-[100px] pt-9 desktop-sm:flex">
         <ul className="flex w-[299px] items-center gap-6 font-tight text-[17px] leading-[25.5px] tracking-[-0.34px] text-white">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <a
-                tabIndex={0}
-                aria-label={link.aria}
-                onKeyDown={(event) => handleKeyDown(event, link.href)}
-                className="inline-flex min-h-11 items-center touch-manipulation whitespace-nowrap transition-opacity duration-200 ease focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [-webkit-tap-highlight-color:transparent] [@media(hover:hover)_and_(pointer:fine)]:hover:opacity-70"
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {NAV_LINKS.map((link, index) => {
+            // Memastikan fallback jika properti bernama lain (href / path / url)
+            const targetHref = link.href || (link as any).path || (link as any).url || "#"
+
+            return (
+              <li key={targetHref !== "#" ? targetHref : index}>
+                <a
+                  href={targetHref}
+                  tabIndex={0}
+                  aria-label={link.aria}
+                  onKeyDown={(event) => handleKeyDown(event, targetHref)}
+                  className="inline-flex min-h-11 items-center touch-manipulation whitespace-nowrap !text-white text-white transition-opacity duration-200 ease focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [-webkit-tap-highlight-color:transparent] [@media(hover:hover)_and_(pointer:fine)]:hover:opacity-70"
+                >
+                  {link.label}
+                </a>
+              </li>
+            )
+          })}
         </ul>
 
         <Logo />

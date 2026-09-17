@@ -394,7 +394,8 @@ export default function FluidSim(props: any) {
         let curl: ReturnType<typeof createFBO>
 
         function getResolution(target: number) {
-            const aspect = canvas.clientWidth / Math.max(1, canvas.clientHeight)
+            // Tambahkan ! setelah canvas
+            const aspect = canvas!.clientWidth / Math.max(1, canvas!.clientHeight) 
             const w = aspect >= 1 ? Math.round(target * aspect) : target
             const h = aspect >= 1 ? target : Math.round(target / aspect)
             return { w, h }
@@ -457,12 +458,14 @@ export default function FluidSim(props: any) {
                 gl!.viewport(0, 0, target.w, target.h)
             } else {
                 gl!.bindFramebuffer(gl!.FRAMEBUFFER, null)
-                gl!.viewport(0, 0, canvas.width, canvas.height)
+                // Tambahkan ! di sini
+                gl!.viewport(0, 0, canvas!.width, canvas!.height) 
             }
             gl!.drawArrays(gl!.TRIANGLE_STRIP, 0, 4)
         }
 
         function resize() {
+            if (!canvas) return
             const dpr = Math.min(window.devicePixelRatio || 1, 1.5)
             const w = Math.max(1, Math.floor(canvas.clientWidth * dpr))
             const h = Math.max(1, Math.floor(canvas.clientHeight * dpr))
@@ -472,8 +475,8 @@ export default function FluidSim(props: any) {
                 initFBOs()
             }
         }
-        resize()
-        initFBOs()
+                resize()
+                initFBOs()
 
         // Pointer state.
         const pointer = {
@@ -490,7 +493,8 @@ export default function FluidSim(props: any) {
         }
 
         function updatePointer(clientX: number, clientY: number) {
-            const rect = canvas.getBoundingClientRect()
+            // Tambahkan ! di sini
+            const rect = canvas!.getBoundingClientRect()
             const nx = (clientX - rect.left) / rect.width
             const ny = 1 - (clientY - rect.top) / rect.height
             pointer.dx = nx - pointer.x
@@ -524,8 +528,8 @@ export default function FluidSim(props: any) {
             dy: number,
             color: [number, number, number]
         ) {
-            const aspect = canvas.width / canvas.height
-            // Mouse radius slider → gaussian falloff size.
+            // Tambahkan ! di sini
+            const aspect = canvas!.width / canvas!.height
             const mr = Math.max(1, propsRef.current?.mouseRadius ?? 8)
             const radius = correctRadius((mr * 0.005) / 100, aspect)
 
