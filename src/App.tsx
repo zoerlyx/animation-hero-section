@@ -1,5 +1,5 @@
-import Hero11 from '../components/originkit/hero-11'
-import '../components/originkit/hero-11.css' // <--- Tambahkan baris ini!
+import Hero11 from '@/components/originkit/hero-11'
+import '@/components/originkit/hero-11.css'
 
 export default function App() {
   return (
