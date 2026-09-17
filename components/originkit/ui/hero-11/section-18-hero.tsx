@@ -6,11 +6,11 @@
 
 "use client";
 
-import { FeatureRail } from "@/components/originkit/ui/hero-11/feature-rail";
+import { FeatureRail } from "./feature-rail";
 import {
   GlowBackground,
   GradientOverlay,
-} from "@/components/originkit/ui/hero-11/glow-background";
+} from "./glow-background";
 import { HeroContent } from "@/components/originkit/ui/hero-11/hero-content";
 import { Navbar } from "@/components/originkit/ui/hero-11/navbar";
 import { PortraitStage } from "@/components/originkit/ui/hero-11/portrait-stage";
