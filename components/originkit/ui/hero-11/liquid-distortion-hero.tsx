@@ -4,8 +4,8 @@
 "use client";
 
 import type { CSSProperties } from "react";
-import FluidTrail from "@/components/originkit/ui/hero-11/fluid-trail";
-import LiquidHover from "@/components/originkit/ui/hero-11/liquid-hover";
+import FluidTrail from "./fluid-trail";
+import LiquidHover from "./liquid-hover";
 
 /** Public asset URLs — use a function so preview rewriters stay stable. */
 function asset(file: string) {
