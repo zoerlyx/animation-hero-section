@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
-@source "./components";
-@source "./app";
+/* Pastikan Tailwind v4 memindai semua komponen & aset app */
+@source "../components";
+@source "../app";
 
-
+/* Import Token Tema Originkit */
 @import "../app/originkit-section-theme.css";
 @import "../app/originkit-section-themes.css";
+
+/* Import CSS khusus komponen Hero 11 */
+@import "../components/originkit/hero-11.css";
