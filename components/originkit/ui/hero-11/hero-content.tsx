@@ -7,7 +7,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { Button } from "@/components/originkit/ui/hero-11/button";
+import { Button } from "./button";
 
 /** ease-out-cubic */
 const EASE_OUT = [0.215, 0.61, 0.355, 1] as const;
